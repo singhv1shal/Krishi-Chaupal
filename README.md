@@ -1,25 +1,28 @@
 # Krishi-Chaupal
+![home](img/home.jpeg)
+
 This project is developed for SIH which involves tech bucket of Web development using django, Machine Learning, Natural Language Processing, RestAPI calls etc.
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ **Krishi Chaupal** is an AI powered web portal that provides personalised crop advisory based on weather patterns using **embedded Machine Learning Model** . 
+* **Krishi Chaupal** is an AI powered web portal that provides personalised crop advisory based on weather patterns using **embedded Machine Learning Model** . 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ Enables farmers for better financial planning by data aggregation and visualisation of loans through **tableau** . 
+* Enables farmers for better financial planning by data aggregation and visualisation of loans through **tableau** . 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ Performs crop quality check using **ensemble Machine Learning Classification Model** trained on **self-designed features**. 
+- Performs crop quality check using **ensemble Machine Learning Classification Model** trained on **self-designed features**. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ It has a built-in **multi-lingual chatbot** for real-time assistance to farmers ,made using **DialogFlow** and **google translate API** . 
+- It has a built-in **multi-lingual chatbot** for real-time assistance to farmers ,made using **DialogFlow** and **google translate API** . 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ The portal offers the Government Agencies to **broadcast** update when there is major pest attack,weather warnings etc, using **Django Twilio API** . 
+- The portal offers the Government Agencies to **broadcast** update when there is major pest attack,weather warnings etc, using **Django Twilio API** . 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ It displays real-time state wise crop advisory , weather forecast according to Indian Metrological Department and also provides various agricultural schemes of State and Central Government using **Scheduled Web Scraping** and **multi-threading** which speeds up the process by **1.5x** . 
+- It displays real-time state wise crop advisory , weather forecast according to Indian Metrological Department and also provides various agricultural schemes of State and Central Government using **Scheduled Web Scraping** and **multi-threading** which speeds up the process by **1.5x** . 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ It has portal for Agro-marketing which provides transparency to farmers to sell their crops on current market prices . 
+- It has portal for Agro-marketing which provides transparency to farmers to sell their crops on current market prices . 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ The  portal is **multi-lingual** using django support for internationalization and localization, introducing local middleware to parse a request and decide what translation object to install in current thread context and set appropriate language in URL. 
+- The  portal is **multi-lingual** using django support for internationalization and localization, introducing local middleware to parse a request and decide what translation object to install in current thread context and set appropriate language in URL. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ We provide **REST API** for our Crop quality check and loan visualisation module so that any third party can interact. 
+- We provide **REST API** for our Crop quality check and loan visualisation module so that any third party can interact. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;⮚ **Browser extenstion** for ask me interface which act as our mini support over other platforms
+- **Browser extenstion** for ask me interface which act as our mini support over other platforms.
+
 ## Running the tests
 
 ### Getting Started
@@ -102,16 +105,16 @@ You need to be in the directory that contains the manage.py file (the djangogirl
 ## Flowchart of different module
 
 ### Crop Suggestion
-![](https://drive.google.com/uc?export=view&id=1qFGKf12gkxop4YIRNMOt_IBlM0vDoz_2)
+![](img/crop_suggestion.PNG)
 
 ### Crop Quality Check
-![](https://drive.google.com/uc?export=view&id=1Od_q-9juIpmYTbY1Ub_aR7dKg7InltCd)
+![](img/MODEL.PNG)
 
 ### Chatbot
-![](https://drive.google.com/uc?export=view&id=1lpPxA-yUin4Cvry05e8dT6VGHFuSSuC8)
+![](img/Chatbot.PNG)
 
 ### Loan Visualization
-![](https://drive.google.com/uc?export=view&id=1HtS7jXdf9pWhfqRjW5Gj9JLxbBfplTBq)
+![](img/TABLEAU_FLOW.PNG)
 
 
 
