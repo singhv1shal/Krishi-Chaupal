@@ -112,3 +112,12 @@ You need to be in the directory that contains the manage.py file (the djangogirl
 ```
 ## Running the tests
 
+
+## Flowchart of different module
+
+
+## Acknowledgments
+
+* Smart India Hackathon 
+* MHRD
+* AICTE
