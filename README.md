@@ -1,8 +1,6 @@
 # Krishi-Chaupal
 ![home](img/home.jpeg)
 
-This project is developed for SIH which involves tech bucket of Web development using django, Machine Learning, Natural Language Processing, RestAPI calls etc.
-
 * **Krishi Chaupal** is an AI powered web portal that provides personalised crop advisory based on weather patterns using **embedded Machine Learning Model** . 
 
 * Enables farmers for better financial planning by data aggregation and visualisation of loans through **tableau** . 
@@ -116,10 +114,3 @@ You need to be in the directory that contains the manage.py file (the djangogirl
 ### Loan Visualization
 ![](img/TABLEAU_FLOW.PNG)
 
-
-
-## Acknowledgments
-
-* Smart India Hackathon 
-* MHRD
-* AICTE
