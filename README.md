@@ -79,7 +79,7 @@ The command above will create a directory called myvenv (or whatever name you ch
 ### Working with virtualenv: Windows
 Start your virtual environment by running:
 ```
-C:\Users\Name\SIH_TEAM_GULLY_DEVS_R19_MINISTRY OF RAILWAYS_BB4> myvenv\Scripts\activate
+C:\Users\Name\Krishi_Chaupal> myvenv\Scripts\activate
 ```
 ### Working with virtualenv: Linux and OS X
 Start your virtual environment by running:
@@ -108,7 +108,7 @@ Now, run pip install -r requirements.txt to install Django.
 ### Starting the web server
 You need to be in the directory that contains the manage.py file (the djangogirls directory). In the console, we can start the web server by running python manage.py runserver:
 ```
-(myvenv) ~/SIH_TEAM_GULLY_DEVS_R19_MINISTRY OF RAILWAYS_BB4$ python manage.py runserver
+(myvenv) ~/Krishi_Chaupal$ python manage.py runserver
 ```
 ## Running the tests
 
