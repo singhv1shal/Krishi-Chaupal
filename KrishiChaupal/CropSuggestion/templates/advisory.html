@@ -1,0 +1,266 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Real-time Weather Forecast and Crop Suggestion</h2>
+                        <p><span><span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<br />
+<br />
+<br />
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Agricultural_forecast</title>
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+  <div class="container vertical-tabs">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-one-tab" data-toggle="pill" href="#v-pills-one" role="tab" aria-controls="v-pills-one" aria-selected="true">Weather Forecast </a>
+
+           <a class="nav-link" id="v-pills-two-tab" data-toggle="pill" href="#v-pills-two" role="tab" aria-controls="v-pills-two" aria-selected="false">Arunachal Pradesh</a>
+
+          <a class="nav-link" id="v-pills-three-tab" data-toggle="pill" href="#v-pills-three" role="tab" aria-controls="v-pills-three" aria-selected="false">Andhra Pradesh </a>
+
+      <a class="nav-link" id="v-pills-four-tab" data-toggle="pill" href="#v-pills-four" role="tab" aria-controls="v-pills-four" aria-selected="false">Assam</a>
+
+           <a class="nav-link" id="v-pills-five-tab" data-toggle="pill" href="#v-pills-five" role="tab" aria-controls="v-pills-five" aria-selected="false">Bihar </a>
+
+           <a class="nav-link" id="v-pills-six-tab" data-toggle="pill" href="#v-pills-six" role="tab" aria-controls="v-pills-six" aria-selected="false">Chattisgarh </a>
+
+           <a class="nav-link" id="v-pills-seven-tab" data-toggle="pill" href="#v-pills-seven" role="tab" aria-controls="v-pills-seven" aria-selected="false">Gujarat </a>
+
+           <a class="nav-link" id="v-pills-eight-tab" data-toggle="pill" href="#v-pills-eight" role="tab" aria-controls="v-pills-eight" aria-selected="false">Haryana </a>
+
+           <a class="nav-link" id="v-pills-nine-tab" data-toggle="pill" href="#v-pills-nine" role="tab" aria-controls="v-pills-nine" aria-selected="false">Himachal Pradesh </a>
+           <a class="nav-link" id="v-pills-ten-tab" data-toggle="pill" href="#v-pills-ten" role="tab" aria-controls="v-pills-ten" aria-selected="false">Jammu and Kashmir </a>
+           <a class="nav-link" id="v-pills-eleven-tab" data-toggle="pill" href="#v-pills-eleven" role="tab" aria-controls="v-pills-eleven" aria-selected="false">Jharkhand </a>
+           <a class="nav-link" id="v-pills-twelve-tab" data-toggle="pill" href="#v-pills-twelve" role="tab" aria-controls="v-pills-twelve" aria-selected="false">Karnataka </a>
+           <a class="nav-link" id="v-pills-thirteen-tab" data-toggle="pill" href="#v-pills-thirteen" role="tab" aria-controls="v-pills-thirteen" aria-selected="false"> Kerala</a>
+           <a class="nav-link" id="v-pills-14-tab" data-toggle="pill" href="#v-pills-14" role="tab" aria-controls="v-pills-14" aria-selected="false">Madhya Pradesh </a>
+           <a class="nav-link" id="v-pills-15-tab" data-toggle="pill" href="#v-pills-15" role="tab" aria-controls="v-pills-15" aria-selected="false">Maharashtra </a>
+           <a class="nav-link" id="v-pills-16-tab" data-toggle="pill" href="#v-pills-16" role="tab" aria-controls="v-pills-16" aria-selected="false">Meghalaya </a>
+           <a class="nav-link" id="v-pills-17-tab" data-toggle="pill" href="#v-pills-17" role="tab" aria-controls="v-pills-17" aria-selected="false">Odisha </a>
+           <a class="nav-link" id="v-pills-18-tab" data-toggle="pill" href="#v-pills-18" role="tab" aria-controls="v-pills-18" aria-selected="false">Punjab </a>
+  <a class="nav-link" id="v-pills-three-tab" data-toggle="pill" href="#v-pills-19" role="tab" aria-controls="v-pills-19" aria-selected="false"> Rajasthan</a>
+           <a class="nav-link" id="v-pills-20-tab" data-toggle="pill" href="#v-pills-20" role="tab" aria-controls="v-pills-20" aria-selected="false">Tamil Nadu </a>
+           <a class="nav-link" id="v-pills-21-tab" data-toggle="pill" href="#v-pills-21" role="tab" aria-controls="v-pills-21" aria-selected="false">Telangana </a>
+           <a class="nav-link" id="v-pills-22-tab" data-toggle="pill" href="#v-pills-22" role="tab" aria-controls="v-pills-22" aria-selected="false">Uttar Pradesh </a>
+           <a class="nav-link" id="v-pills-23-tab" data-toggle="pill" href="#v-pills-23" role="tab" aria-controls="v-pills-23" aria-selected="false">Uttarakhand </a>
+           <a class="nav-link" id="v-pills-24-tab" data-toggle="pill" href="#v-pills-24" role="tab" aria-controls="v-pills-24" aria-selected="false">West Bengal </a>
+
+
+
+        </div>
+</div>
+      <div class="col-md-8 offset-md-1">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+            <div id="accordion" role="tablist">
+              <div class="card">
+
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+
+
+                    <iframe name="iframe1" src="weather" width=100.01%; height=1000px;></iframe>
+<!--         Put weather ForeCast         -->
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+<!--               <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                  <h5>
+                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What markets does Just Energy service?
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                  </div>
+                </div>
+              </div> -->
+<!--               <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                  <h5>
+                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Is Just Energy licensed?
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-two" role="tabpanel" aria-labelledby="v-pills-two-tab">
+            <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Arunachal%20Pradesh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+
+
+          </div>
+
+           <div class="tab-pane fade" id="v-pills-three" role="tabpanel" aria-labelledby="v-pills-three-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Andhra%20Pradesh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+
+           <div class="tab-pane fade" id="v-pills-four" role="tabpanel" aria-labelledby="v-pills-four-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Assam.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+
+         <div class="tab-pane fade" id="v-pills-five" role="tabpanel" aria-labelledby="v-pills-five-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Bihar.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+
+           <div class="tab-pane fade" id="v-pills-six" role="tabpanel" aria-labelledby="v-pills-six-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Chattisgarh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-seven" role="tabpanel" aria-labelledby="v-pills-seven-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Gujarat.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-eight" role="tabpanel" aria-labelledby="v-pills-eight-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Haryana.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-nine" role="tabpanel" aria-labelledby="v-pills-nine-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Himachal%20Pradesh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-ten" role="tabpanel" aria-labelledby="v-pills-ten-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Jammu%20and%20Pradesh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-eleven" role="tabpanel" aria-labelledby="v-pills-eleven-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Jharkhand.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-twelve" role="tabpanel" aria-labelledby="v-pills-twelve-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Karnataka.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-thirteen" role="tabpanel" aria-labelledby="v-pills-thirteen-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Kerala.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+
+           <div class="tab-pane fade" id="v-pills-14" role="tabpanel" aria-labelledby="v-pills-14-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Madhya%20Pradesh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-15" role="tabpanel" aria-labelledby="v-pills-15-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Maharashtra.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-16" role="tabpanel" aria-labelledby="v-pills-16-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Meghalaya.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-17" role="tabpanel" aria-labelledby="v-pills-17-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Odisha.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-18" role="tabpanel" aria-labelledby="v-pills-18-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Punjab.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-19" role="tabpanel" aria-labelledby="v-pills-19-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Rajasthan.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-20" role="tabpanel" aria-labelledby="v-pills-20-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Tamil%20Nadu.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-21" role="tabpanel" aria-labelledby="v-pills-21-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Telengana.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-22" role="tabpanel" aria-labelledby="v-pills-22-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Uttar%20Pradesh.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-23" role="tabpanel" aria-labelledby="v-pills-23-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/Uttarakhand.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+           <div class="tab-pane fade" id="v-pills-24" role="tabpanel" aria-labelledby="v-pills-24-tab">
+             <iframe src="http://docs.google.com/gview?url=https://mausam.imd.gov.in/imd_latest/contents/agromet/agromet-data/state/current/english-pdf/West%20Bengal.pdf&embedded=true"
+style="width:100%; height:2000px;" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js'></script>
+<script type="text/javascript">
+  var cssLink = document.createElement("link");
+  cssLink.href = "./weather.css";
+  cssLink.rel = "stylesheet";
+  cssLink.type = "text/css";
+  frames['iframe1'].document.head.appendChild(cssLink);
+</script>
+
+<script src="https://use.fontawesome.com/b5722f1bf7.js">
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script  src="./weather.js"></script>
+</body>
+</html>
+
+{% endblock %}

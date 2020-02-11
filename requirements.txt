@@ -1,0 +1,6 @@
+django==2.0.1
+django-bootstrap3
+beautifulsoup4
+selenium
+lxml
+prompt-toolkit

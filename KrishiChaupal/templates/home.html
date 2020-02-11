@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% load static %}
+    <!-- Header part end-->
+{% block content %}
+<div style="background-image: url("{ %static 'krishi_chaupal/img/banner_img.jpg' %}")">
+  <style>
+    @media (min-width: 1200px){
+       background: url("{ %static 'krishi_chaupal/img/banner_img.jpg' %}");
+    }
+</style>
+    <section class="banner banner_part">
+        <div class="container" id="content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+
+                            <h1>KRISHI CHAUPAL</h1>
+          <h5>Farmers are backbone of our country and also of our economy.</h5>
+                            <p>This is a web portal designed specially to help farmer in providing them full assistance from what to sown,where to sown, which season is best for what type of crops,how to protect it from several insect and pest attacks to the various loans and government schemes and programmes.</p>
+                              {% if not user.is_authenticated %}
+                            <a href="{% url 'accounts:signup' %}" class="btn_1">Sign Up</a>
+                            <a href="{% url 'accounts:login' %}" class="btn_2">Log In</a>
+                            {% else %}
+                            <h5><p>
+                              You are Logged in! </p> </h5>
+                            {%endif%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- banner part start-->
+
+    <!-- feature_part start-->
+    <section class="feature_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xl-3 align-self-center">
+                    <div class="single_feature_text ">
+                        <h2>Be Sure before<br> you start!</h2>
+                        <p>Setting up a perfect plan can provide high yield in less investment</p>
+                        <a href="{% url 'readmore' %}" class="btn_1">Read More</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><i class="ti-layers"></i></span>
+                            <h4>Crop Suggestions</h4>
+                            <p>It provides real time best suitable crop to be sown and advisory based on weather patterns and forecast of upcoming days.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><i class="ti-new-window"></i></span>
+                            <h4>Schemes</h4>
+                            <p>All information about various government schemes to facilitate the farmers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="single_feature">
+                        <div class="single_feature_part single_feature_part_2">
+                            <span class="single_service_icon style_icon"><i class="ti-light-bulb"></i></span>
+                            <h4>Planning a loan?</h4>
+                            <p>Compare between loans provided by various banks and choose the suitable one </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="advance_feature learning_part">
+        <div class="container">
+            <div class="row align-items-sm-center align-items-xl-stretch">
+                <div class="col-md-6 col-lg-6">
+                    <div class="learning_member_text">
+                        <h5>Advance features</h5>
+                        <h2>Our Advance Features for
+                            Maximising Profit</h2>
+                        <p>We are also providing advance features like quality check and specific precautions that can help in maximizing the profit and also leads to high yield.</p>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <div class="learning_member_text_iner">
+                                    <span class="ti-pencil-alt"></span>
+                                    <h4>Quality Check and specific precautions</h4>
+                                    <p>Know the health of your crops by uploading the picture of the crop and then personalised measures will be provided to cope up the adverse effects.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <div class="learning_member_text_iner">
+                                    <span class="ti-stamp"></span>
+                                    <h4>Chat Bot</h4>
+                                    <p>Let's discuss the problems and relative solutions by auditory and textual method.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="learning_img">
+                        <img src="{% static 'krishi_chaupal/img/advance_feature_img.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!--::review_part start::-->
+    <section class="testimonial_part">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+                        <p>FACTS AND QUOTES</p>
+                        <h2>Happy Farmers</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="textimonial_iner owl-carousel">
+                        <div class="testimonial_slider">
+                            <div class="row">
+                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                    <div class="testimonial_slider_text">
+                                        <p>In 2013, India earned $26 billion from $276 billion trade in commercial services. Whereas agricultural trade of $71 billion fetched as much as $23 billion trade surplus. This shows that the net foreign earnings from agriculture are at par with the IT sector.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-2 col-sm-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'krishi_chaupal/img/resize-1580543849795564328testimonialimg1.png' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-none d-xl-block">
+                                    <div class="testimonial_slider_text">
+                                        <p>India is the 2nd largest producers and one of the largest exporters of cotton in the world. Cotton textile from India is exported to the US, Italy, Germany and many other countries.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 d-none d-xl-block">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'krishi_chaupal/img/resize-1580544324832804593910037674a.png' %}" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial_slider">
+                            <div class="row">
+                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                    <div class="testimonial_slider_text">
+                                        <p>Indian farmers don multiple hats. Other than tending to their crops, they also take on the role of mechanic, weatherman, veterinarian, businessman, marketeer and scientist.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-2 col-sm-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'krishi_chaupal/img/resize-158054428317445306051as.png' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-none d-xl-block">
+                                    <div class="testimonial_slider_text">
+                                        <p>According to the data from the agriculture ministry, India produced a whopping 95.9 million tons of wheat in the year 2013-14.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 d-none d-xl-block">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'krishi_chaupal/img/resize-1580545280686315116tech.png' %}" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial_slider">
+                            <div class="row">
+                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                    <div class="testimonial_slider_text">
+                                        <p>Organic farming in India is largely based on traditional farming method that have been passed down since centuries, and is "as organic as it gets.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-2 col-sm-4">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'krishi_chaupal/img/resize-1580545203123784238abs.png' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-none d-xl-block">
+                                    <div class="testimonial_slider_text">
+                                        <p>India has the 2nd largest agricultural output in the world, and as of 2013, it is the 7th largest exporter of agricultural goods.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 d-none d-xl-block">
+                                    <div class="testimonial_slider_img">
+                                        <img src="{% static 'krishi_chaupal/img/resize-1580545240409293753626870954q.png' %}" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--::blog_part end::-->
+
+
+  <!-- footer part start-->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-sm-6 col-md-4 col-xl-3">
+                    <div class="single-footer-widget footer_1">
+                        <a href="home.html"><center> <img src="{% static 'krishi_chaupal/img/logo.png' %}" alt="" class="logo"></center> </a>
+      <style>img.logo {
+  height: 50%;
+  width: 50%;
+  }
+  </style>
+                        <p>This is a web portal designed specially to help farmer in providing them full assistance.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>SMS Broadcast</h4>
+                        <p>This service facilitate the farmer to get the information about any adverse weather condition instantly.
+                        </p>
+                        <form action="#">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder='Enter Phone Number'
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter phone number'">
+                                    <div class="input-group-append">
+                                        <button class="btn btn_1" type="button"><i class="ti-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Contact us</h4>
+                        <div class="contact_info">
+                            <p><span> Address :</span> Institute of Engineering and Technology<br>Jankipuram Sector F<br>Sitapur Road,Lucknow 226021<br></p>
+                            <p><span> Phone : </span>+917007110758<br>  +917905770800<br> </p>
+                            <p><span> Email :</span>1705210063@ietlucknow.ac.in<br>1705210057@ietlucknow.ac.in<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+{% endblock %}

@@ -1,0 +1,243 @@
+
+<!doctype html>
+{% load static from staticfiles %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Krishi Chaupal</title>
+    <link rel="icon" href="{static 'img/favicon.png' %}">
+      <link rel="icon" href="{% static 'img/ourlogo.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/owl.carousel.min.css' %}">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/themify-icons.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/flaticon.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'krishi_chaupal/css/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'krishi_chaupal/css/stylechat.css' %}">
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+
+                      <a class="navbar-brand"> <img src="{%static 'krishi_chaupal/img/logo.png' %}" alt="" class="logo"> </a>
+                    <style> img.logo {
+                    height: 50%;
+                    width: 50%;
+                    }
+                    </style>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'CropSuggestion:suggest' %}">Forecast and Advisory</a>
+                                </li>
+
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" 				aria-expanded="false"> Loans
+                                    </a>
+
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{% url 'loans:canara' %}">Canara Bank</a>
+                                        <a class="dropdown-item" href="{% url 'loans:cbi' %}">Central Bank of India</a>
+                                        <a class="dropdown-item" href="{% url 'loans:bom'%}">Bank of Maharastra</a>
+                                        <a class="dropdown-item" href="{% url 'loans:cb' %}">corporative Bank</a>
+                                        <a class="dropdown-item" href="{% url 'loans:iob' %}">Indian Overseas Bank</a>
+                                        <a class="dropdown-item" href="{% url 'loans:uco' %}">UCO Bank</a>
+                                        <a class="dropdown-item" href="{% url 'loans:bb' %}">Bihar bank</a>
+                                    </div>
+                                </li>
+
+  {% if user.is_authenticated %}
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'QualityCheck:UploadImage_view' %}">AI quality check</a>
+                                </li>
+{% endif %}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="crop.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-							haspopup="true" aria-expanded="false"> Major Crops
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{% url 'rice' %}">Rice</a>
+                                        <a class="dropdown-item" href="{% url 'wheat' %}">Wheat</a>
+                                        <a class="dropdown-item" href="{% url 'sugarcane' %}">Sugar Cane</a>
+                                        <a class="dropdown-item" href="{% url 'maize' %}">Maize</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                                    </li>
+
+                                {% if user.is_authenticated %}
+                                <li class="nav-item">
+                                  <a class="nav-link" href="{% url 'accounts:logout' %}">Log Out</a>
+                                </li>
+                                {% else %}
+                                <li>
+                                  <a class="nav-link" href="{% url 'accounts:login' %}">Log In</a>
+                                {% endif %}
+
+                                <li>
+                                <a class="nav-link" href="{% url 'broadcast:broadcast_sms' %}">SMS Broadcast</a>
+                              </li>
+
+                                <li class="d-none d-lg-block">
+                                    <a class="btn_1" href="{% url 'risks' %}">Risks & Their Management</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="container mycontent">
+{% block content %}
+
+{% endblock %}
+</div>
+
+{% if user.is_authenticated %}
+
+<div id="chat-circle" class=" btn-raised">
+<svg class="icon-speech" viewBox="0 0 48 48">
+      <use xlink:href="#icon-speech" />
+    </svg>	</div>
+
+<div class="chatbot chatbot--closed ">
+  <div class="chatbot__header">
+    <p><strong>Meghdoot <span class="u-text-highlight"></span></strong></p>
+    <svg class="chatbot__close-button icon-speech" viewBox="0 0 32 32">
+      <use xlink:href="#icon-speech" />
+    </svg>
+    <svg class="chatbot__close-button icon-close" viewBox="0 0 32 32">
+      <use xlink:href="#icon-close" />
+    </svg>
+  </div>
+  <div class="chatbot__message-window">
+    <ul class="chatbot__messages">
+      <li class="is-ai animation">
+        <div class="is-ai__profile-picture">
+          <svg class="icon-avatar" viewBox="0 0 32 32">
+            <use xlink:href="#avatar" />
+          </svg>
+        </div>
+        <span class="chatbot__arrow chatbot__arrow--left"></span>
+        <p class='chatbot__message'>
+         How Can I help You ?</p>
+      </li>
+      <!-- Message here -->
+    </ul>
+  </div>
+  <div class="chatbot__entry chatbot--closed">
+    <input type="text" class="chatbot__input" placeholder="Ask me " />
+    <svg class="chatbot__submit" viewBox="0 0 32 32">
+      <use xlink:href="#icon-send" />
+    </svg>
+  </div>
+</div>
+
+<!-- Symbols -->
+<svg>
+  <!-- Close icon -->
+  <symbol id="icon-close" viewBox="0 0 32 32">
+    <title>Close</title>
+    <path d="M2.624 8.297l2.963-2.963 23.704 23.704-2.963 2.963-23.704-23.704z" />
+    <path d="M2.624 29.037l23.704-23.704 2.963 2.963-23.704 23.704-2.963-2.963z" />
+  </symbol>
+
+  <!-- Speech icon -->
+  <symbol id="icon-speech" viewBox="0 0 32 32">
+    <title>Speech</title>
+    <path style="fill: #ffffff; fill-rule: evenodd;" d="M21.795 5.333h-11.413c-0.038 0-0.077 0-0.114 0l-0.134 0.011v2.796c0.143-0.006 0.273-0.009 0.385-0.009h11.277c0.070 0 7.074 0.213 7.074 7.695 0 5.179-2.956 7.695-9.036 7.695h-3.792c-0.691 0-1.12 0.526-1.38 1.159l-1.387 3.093-1.625 3.77 0.245 0.453h2.56l2.538-5.678h2.837c7.633 0 11.84-3.727 11.84-10.494 0.001-8.564-7.313-10.492-9.875-10.492z" />
+    <path style="fill: #ffffff; fill-rule: evenodd;" d="M10.912 24.259c-0.242-0.442-0.703-0.737-1.234-0.737-0 0-0 0-0 0h-0.56c-0.599-0.011-1.171-0.108-1.71-0.28l0.042 0.012c-1.82-0.559-4.427-2.26-4.427-7.424 0-6.683 5.024-7.597 7.109-7.686v-2.8c-2.042 0.095-9.91 1.067-9.91 10.483 0 4.832 1.961 7.367 3.606 8.64 1.38 1.067 3.109 1.744 4.991 1.843l0.033 0.019 2.805 5.211 1.41-3.273z" />
+  </symbol>
+
+  <!-- Send icon -->
+  <symbol id="icon-send" viewBox="0 0 23.97 21.9">
+    <title>Send</title>
+    <path d="M0.31,9.43a0.5,0.5,0,0,0,0,.93l8.3,3.23L23.15,0Z"/>
+    <path d="M9,14.6H9V21.4a0.5,0.5,0,0,0,.93.25L13.22,16l6,3.32A0.5,0.5,0,0,0,20,19l4-18.4Z"/>
+  </symbol>
+
+  <!-- Avatar icon -->
+  <symbol id="avatar" width="32" height="32" viewBox="0 0 32 32">
+    <title>Avatar</title>
+        <circle id="oval" fill="#2F2E36" cx="16" cy="16" r="16"></circle>
+        <g id="Group" transform="translate(7.000000, 0.000000)" fill-rule="nonzero">
+            <g id="Shape">
+                <polygon fill="#FFFFFF" points="3.60282353 20.1870588 19.0528302 12.91870588 16.5498113 3.60282353 16.5498113 3.60282353 14.6071698 10.905882 14.6071698 6.79282353 11.88 0 11.88 12 11.57 23.76 9.57 21.0328302 3.60282353 22.0328302"></polygon>
+<!--                 <polygon fill="#FFFFFF" points="15.914717 11.88 13.8973585 15.7279245 11.88 11.88 7.92 11.88 12.0667925 19.0528302 12.0667925 23.76 15.6532075 23.76 15.6532075 19.0528302 19.8 11.88"></polygon> -->
+                <polygon fill="#FFE600" points="23.43 0 0 8.58 23.43 4.43921739"></polygon>
+            </g>
+        </g>
+  </symbol>
+
+</svg>
+{% endif %}
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js'>
+
+</script><script  src="{% static 'krishi_chaupal/js/script.js' %}"></script>
+
+<script src="{%static 'krishi_chaupal/js/jquery-1.12.1.min.js' %}"></script>
+<!-- popper js -->
+<script src="{% static 'krishi_chaupal/js/popper.min.js' %}"></script>
+<!-- bootstrap js -->
+<script src="{%static 'krishi_chaupal/js/bootstrap.min.js'%}"></script>
+<!-- easing js -->
+<script src="{%static 'krishi_chaupal/js/jquery.magnific-popup.js'%}"></script>
+<!-- swiper js -->
+<script src="{%static 'krishi_chaupal/js/swiper.min.js'%}"></script>
+<!-- swiper js -->
+<script src="{%static 'krishi_chaupal/js/masonry.pkgd.js'%}"></script>
+<!-- particles js -->
+<script src="{%static 'krishi_chaupal/js/owl.carousel.min.js'%}"></script>
+<script src="{%static 'krishi_chaupal/js/jquery.nice-select.min.js'%}"></script>
+<!-- swiper js -->
+<script src="{%static 'krishi_chaupal/js/slick.min.js'%}"></script>
+<script src="{%static 'krishi_chaupal/js/jquery.counterup.min.js'%}"></script>
+<script src="{%static 'krishi_chaupal/js/waypoints.min.js'%}"></script>
+<!-- custom js -->
+<script src="{%static 'krishi_chaupal/js/custom.js'%}"></script>
+<script src="{%static 'krishi_chaupal/js/jquery-2.2.4.min.js'%}"></script>
+
+  </body>
+    </html>

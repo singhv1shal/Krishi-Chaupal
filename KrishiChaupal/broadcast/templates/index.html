@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{%load static %}
+{% block content %}
+
+<br /><br /><br /><br />
+<section class="feature_part">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div id="wrapper">
+
+	<form id="paper" method="POST">
+
+<!-- 		<div id="margin">Title: <input id="title" type="text" name="title"></div> -->
+<!-- <textarea placeholder="Enter Your Message to Broadcast." id="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea> -->
+<!-- <br><div placeholder="Enter Your Message to Broadcast."  id="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "> -->
+
+      {% csrf_token %}
+  	{{form}}
+    <!-- </div> -->
+		<input id="button" type="submit" value="Broadcast">
+
+	</form>
+
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://static.tumblr.com/maopbtg/oimmiw86r/jquery.autosize-min.js'></script>
+<script  src="{% static 'js/script.js' %}"></script>
+</section>
+{% endblock %}

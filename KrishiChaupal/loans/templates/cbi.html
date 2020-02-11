@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br /><br /><br /><br /><br /><br /><br />
+<style>
+.collapsible {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+<h2>Agricultural Loans</h2>
+
+<p>Agricultural loans are any loans that are availed by a farmer to fund seasonal agricultural operations or related activities like animal farming, pisci-culture or purchase of land or agricultural tools. While seasonal agricultural operations routine activities like include preparing and ploughing land for sowing, weeding, and transplantation where necessary, buying inputs such as fertilizers, seeds, insecticides etc. and engaging labour for cultivating and harvesting the crops.
+
+In addition purchasing of land, or purchasing of agricultural tools, storage of produce and transport also are included under purview of agricultural loans.
+
+The agricultural policy of the Government of India also envisages substantial credit flow to increase agricultural production and productivity. Banks provide agricultural term loans to farmers for investment purposes and Short Term Loans for production purposes. There is a need to finance farmers for purchasing land not only to expand their activities but also to make existing small and marginal units economically viable, diversify their present activities and to bring fallow lands and waste lands under cultivation.
+
+In India, agriculture has been marked as priority sector because farmers constitute a large part of the population. As such agriculture sector qualifies for priority sector lending at lower interest rates by banks. In India, most of the commercial banks, co-op societies and rural banks provide agricultural loans to farmers.</p>
+</p>
+
+{% for datak,datav in details.items %}
+<button class="collapsible">{{datak}}</button>
+<div class="content">
+  {% for k,v in datav.items %}
+  <h5> {{k}}</h5>
+  <br />
+  <p>{{v}}</p>
+  <br />
+  {% endfor %}
+</div>
+{% endfor %}
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="./weather.css">
+
+</head>
+<div class="bod">
+
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Boostrap Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Weather Icons Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+    <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+
+  </head>
+
+  <body id="body">
+
+    <!-- site container -->
+    <div class="container-fluid">
+
+      <!--Start of current weather container-->
+      <div class="row">
+        <div class="col-xl-6 col-xl-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 currentWeather">
+          <div class="row">
+            <!-- Celcius / Fahrenheit buttons -->
+            <div class="col-md-6 col-sm-4">
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary active" id="celsiusBtn"> <i class="wi wi-celsius"></i> </button>
+                <button type="button" class="btn btn-primary" id="fahrenheitBtn"> <i class="wi wi-fahrenheit"></i> </button>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-8">
+              <p id="currentDate"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <p id="currentIcon"> </p>
+              <p id="currentDesc">  </p>
+            </div>
+
+            <!-- List Items -->
+            <div class="col-sm-6 currentRight">
+                <p id="currentTemp"></p>
+                <p id="currentLoc"> <i class="fa fa-map-marker"></i> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Todays Weather Collapsible Panel -->
+      <div class="row">
+        <div class="col-xl-6 col-xl-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" id="detailed">
+          <div class="panel-group">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse1">
+                  Daily Weather Summary
+                </a>
+                <a data-toggle="collapse" href="#collapse1">
+                  <span class="fa fa-chevron-down fa-sm" id="menuIconDay"></span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-2 col-sm-4 col-xs-6">
+                    <ul>
+                      <li><i class="wi wi-thermometer"></i> </li>
+                      <li id="detMin"></li>
+                      <li id="detMax"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-2 col-sm-4 col-xs-6">
+                    <ul>
+                      <li><i class="wi wi-horizon"></i> </li>
+                      <li id="detSunrise">Rise </li>
+                      <li id="detSunset">Set </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-2 col-sm-4 col-xs-6">
+                     <ul>
+                      <li><i class="wi wi-strong-wind"></i> </li>
+                      <li id="detWindSpeed"> </li>
+                      <li id="detWindDir"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-2 col-sm-4 col-xs-6">
+                    <ul>
+                      <li><i class="wi wi-raindrops"></i> </li>
+                      <li id="detRain"> </li>
+                      <li id="detRainProb"> <br></li>
+                    </ul>
+                  </div>
+
+                   <div class="col-lg-2 col-sm-4 col-xs-6">
+                    <ul>
+                      <li><i class="wi wi-cloud"></i> </li>
+                      <li id="detCloudCover"> </li>
+                      <li> <br>Cloud cover </li>
+                    </ul>
+                  </div>
+
+                   <div class="col-lg-2 col-sm-4 col-xs-6">
+                    <ul>
+                      <li><i class="wi wi-humidity"></i> </li>
+                      <li id="detHumidity"> </li>
+                      <li> <br>Humidity </li>
+                    </ul>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hourly weather -->
+      <div class="row">
+        <div class="col-xl-6 col-xl-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" id="hourly">
+          <div class="panel-group">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse2">
+                  Next 12 Hours
+                </a>
+                <a data-toggle="collapse" href="#collapse2">
+                  <span class="fa fa-chevron-down fa-sm" id="menuIconHourly"></span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="row">
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime0"></li>
+                      <li id="hourlyIcon0"></li>
+                      <li id="hourlyTemp0"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime1"></li>
+                      <li id="hourlyIcon1"></li>
+                      <li id="hourlyTemp1"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime2"></li>
+                      <li id="hourlyIcon2"></li>
+                      <li id="hourlyTemp2"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime3"></li>
+                      <li id="hourlyIcon3"></li>
+                      <li id="hourlyTemp3"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime4"></li>
+                      <li id="hourlyIcon4"></li>
+                      <li id="hourlyTemp4"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime5"></li>
+                      <li id="hourlyIcon5"></li>
+                      <li id="hourlyTemp5"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime6"></li>
+                      <li id="hourlyIcon6"></li>
+                      <li id="hourlyTemp6"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime7"></li>
+                      <li id="hourlyIcon7"></li>
+                      <li id="hourlyTemp7"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime8"></li>
+                      <li id="hourlyIcon8"></li>
+                      <li id="hourlyTemp8"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime9"></li>
+                      <li id="hourlyIcon9"></li>
+                      <li id="hourlyTemp9"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime10"></li>
+                      <li id="hourlyIcon10"></li>
+                      <li id="hourlyTemp10"></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-sm-1 col-xs-2">
+                    <ul>
+                      <li id="hourlyTime11"></li>
+                      <li id="hourlyIcon11"></li>
+                      <li id="hourlyTemp11"></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!----Start of 5 Day Forecast --->
+
+      <div class="row">
+        <div class="col-xl-6 col-xl-offset-3 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" id="daily5">
+          <div class="panel-group">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse3">
+                  5 Day Forecast
+                </a>
+                <a data-toggle="collapse" href="#collapse3">
+                  <span class="fa fa-chevron-down fa-sm" id="menuIconDaily5"></span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <ul class="nav nav-pills nav-justified" id="navPills">
+                  <li class="active"><a data-toggle="pill" href="#dailyDay0" id="day0"></a></li>
+                  <li><a data-toggle="pill" href="#dailyDay1" id="day1"></a></li>
+                  <li><a data-toggle="pill" href="#dailyDay2" id="day2"></a></li>
+                  <li><a data-toggle="pill" href="#dailyDay3" id="day3"></a></li>
+                  <li><a data-toggle="pill" href="#dailyDay4" id="day4"></a></li>
+                </ul>
+
+                <div class="tab-content">
+ <!-- Day 0 -->
+                  <div id="dailyDay0" class="tab-pane fade in active">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <p id="dailyIcon0"></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 id=daySummary0></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-thermometer"></i> </li>
+                          <li id="dayMin0" class="degree"></li>
+                          <li id="dayMax0" class="degree"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-horizon"></i></li>
+                          <li id="daySunrise0">Rise </li>
+                          <li></li>
+                          <li id="daySunset0">Set </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-strong-wind"></i> </li>
+                          <li id="dayWindSpeed0"> </li>
+                          <li id="dayWindDir0"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-raindrops"></i> </li>
+                          <li id="dayRain0"> </li>
+                          <li id="dayRainProb0"> <br></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+  <!--Day 1 -->
+                  <div id="dailyDay1" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <p id="dailyIcon1"></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 id=daySummary1></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-thermometer"></i> </li>
+                          <li id="dayMin1" class="degree"></li>
+                          <li id="dayMax1" class="degree"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-horizon"></i></li>
+                          <li id="daySunrise1">Rise </li>
+                          <li></li>
+                          <li id="daySunset1">Set </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-strong-wind"></i> </li>
+                          <li id="dayWindSpeed1"> </li>
+                          <li id="dayWindDir1"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-raindrops"></i> </li>
+                          <li id="dayRain1"> </li>
+                          <li id="dayRainProb1"> <br></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+ <!-----Day 2---------->
+                  <div id="dailyDay2" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <p id="dailyIcon2"></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 id=daySummary2></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-thermometer"></i> </li>
+                          <li id="dayMin2" class="degree"></li>
+                          <li id="dayMax2" class="degree"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-horizon"></i></li>
+                          <li id="daySunrise2">Rise </li>
+                          <li></li>
+                          <li id="daySunset2">Set </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-strong-wind"></i> </li>
+                          <li id="dayWindSpeed2"> </li>
+                          <li id="dayWindDir2"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-raindrops"></i> </li>
+                          <li id="dayRain2"> </li>
+                          <li id="dayRainProb2"> <br></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+<!----Day 3---->
+                  <div id="dailyDay3" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <p id="dailyIcon3"></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 id=daySummary3></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-thermometer"></i> </li>
+                          <li id="dayMin3" class="degree"></li>
+                          <li id="dayMax3" class="degree"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-horizon"></i></li>
+                          <li id="daySunrise3">Rise </li>
+                          <li></li>
+                          <li id="daySunset3">Set </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-strong-wind"></i> </li>
+                          <li id="dayWindSpeed3"> </li>
+                          <li id="dayWindDir3"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-raindrops"></i> </li>
+                          <li id="dayRain3"> </li>
+                          <li id="dayRainProb3"> <br></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+<!---Day 4------->
+                  <div id="dailyDay4" class="tab-pane fade">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <p id="dailyIcon4"></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 id=daySummary4></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-thermometer"></i> </li>
+                          <li id="dayMin4"></li>
+                          <li id="dayMax4"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-horizon"></i></li>
+                          <li id="daySunrise4">Rise </li>
+                          <li></li>
+                          <li id="daySunset4">Set </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-strong-wind"></i> </li>
+                          <li id="dayWindSpeed4"> </li>
+                          <li id="dayWindDir4"></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-6">
+                        <ul>
+                          <li><i class="wi wi-raindrops"></i> </li>
+                          <li id="dayRain4"> </li>
+                          <li id="dayRainProb4"> <br></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div> <!-- end site container -->
+  </body>
+</div>
+</html>
+<!-- partial -->
+  <script  src="./weather.js"></script>
+
+</body>
+</html>

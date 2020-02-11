@@ -1,0 +1,234 @@
+.bod {
+  font-family: Asap;
+  background-repeat: no-repeat;
+  background-image: url('http://www.zastavki.com/pictures/1440x900/2009/Nature_Clouds_Gray_clouds_013587_.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100%;
+}
+
+#body .currentWeather{
+  text-align: center;
+  height: auto;
+  margin-top: 10rem;
+  background-image: -webkit-linear-gradient(45deg, #424242, #141414) ;
+  border-radius: 10px;
+  color: #EEE;
+  opacity: 0.75;
+  box-shadow: 0px 0px 100px 1px #EEE
+}
+
+#body .btn-group {
+  margin-top: 3rem;
+  float: left;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+#body .btn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #EEEEEE;
+  color: #616161;
+  border-color: #E0E0E0;
+  border-width: 0.2rem;
+}
+#body .btn i {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+#body .btn.active {
+  background-color: #616161;
+  color: #EEEEEE;
+}
+#body .btn:hover {
+  background-color: #424242;
+  color: #EEEEEE;
+}
+#currentIcon{
+  font-size: 15rem;
+  margin-top: 1.2rem;
+}
+#currentDesc{
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  padding-bottom: 4rem;
+}
+#currentDate {
+  margin-top: 4rem;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+}
+#body .currentRight p {
+  letter-spacing: 0.4rem;
+}
+#currentTemp {
+  font-size: 15rem;
+  margin-top: 0rem;
+}
+#currentLoc{
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+/* Start of Detailed Panels CSS */
+#detailed {
+  margin-top: 4rem;
+  color: #EEE;
+  letter-spacing: 0.3rem;
+  background-image: -webkit-linear-gradient(45deg, #424242, #141414) ;
+  border-radius: 10px;
+  color: #EEE;
+  opacity: 0.75;
+  box-shadow: 0px 0px 100px 1px #EEE
+}
+#detailed .panel-heading a{
+  color: #EEE;
+  letter-spacing: 0.5rem;
+}
+#detailed h4 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+#detailed .panel-title a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+}
+#detailed .panel-body li {
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+#detailed ul{
+  list-style: none;
+  padding: 0;
+}
+#detailed i {
+  font-size: 7rem;
+}
+#detMin i{
+  font-size: 3rem;
+}
+#detMax i{
+  font-size: 3rem;
+}
+
+/* Start of Hourly Panels CSS */
+#hourly {
+  margin-top: 2rem;
+  color: #EEE;
+  background-image: -webkit-linear-gradient(45deg, #424242, #141414) ;
+  border-radius: 10px;
+  color: #EEE;
+  opacity: 0.75;
+  box-shadow: 0px 0px 100px 5px #EEE
+}
+#hourly .panel-heading a{
+  color: #EEE;
+  letter-spacing: 0.5rem;
+}
+#hourly h4 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+#hourly .panel-title a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+}
+#hourly .panel-body li {
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+#hourly ul{
+  list-style: none;
+  padding: 0;
+}
+#hourly i {
+  font-size: 3.5rem;
+}
+#hourly li {
+  padding-bottom: 2rem;
+}
+#hourly .col-sm-1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/********* Start of 5 Daily Forecast ******/
+#daily5 {
+  margin-top: 2rem;
+  margin-bottom: 20rem;
+  color: #EEE;
+  background-image: -webkit-linear-gradient(45deg, #424242, #141414) ;
+  border-radius: 10px;
+  color: #EEE;
+  opacity: 0.75;
+  box-shadow: 0px 0px 100px 5px #EEE
+}
+#daily5 .panel-heading a{
+  color: #EEE;
+  letter-spacing: 0.5rem;
+}
+#daily5 h4 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+#daily5 .panel-title a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+}
+#navPills li {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+#navPills a {
+  color: #EEE;
+}
+#navPills a:hover {
+  background-color: #EEEEEE;
+  color: #424242;
+}
+#navPills .active a{
+  background-color: #EEEEEE;
+  color: #424242;
+}
+#daily5 .tab-content li {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing:0.2rem;
+}
+#daily5 ul{
+  list-style: none;
+  margin-top: 0rem;
+  padding: 0;
+}
+#daily5 i {
+  font-size: 7rem;
+}
+#daily5 p {
+  margin-top:6rem;
+  margin-bottom: 3rem;
+  font-size: 10rem;
+}
+#daily5 p i {
+  font-size: 12rem;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+#daily5 h3 {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  margin-top: 10rem;
+  text-align: center;
+}
+#daily5 .degree i{
+  font-size: 3rem;
+}
+
+/**************/
+#menuIconDay, #menuIconDaily5, #menuIconHourly{
+  float: right;
+}
