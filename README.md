@@ -1,4 +1,7 @@
 # Krishi-Chaupal
+
+![](https://drive.google.com/uc?export=view&id=1iHh8jkbtt6cm3tVSj1QNiCl2XdHvV2VC)
+
 This project is developed for SIH which involves tech bucket of Web development using django, Machine Learning, Natural Language Processing, RestAPI calls etc.
 
 &nbsp;&nbsp;&nbsp;&nbsp;⮚ **Krishi Chaupal** is an AI powered web portal that provides personalised crop advisory based on weather patterns using **embedded Machine Learning Model** . 
@@ -20,8 +23,9 @@ This project is developed for SIH which involves tech bucket of Web development 
 &nbsp;&nbsp;&nbsp;&nbsp;⮚ We provide **REST API** for our Crop quality check and loan visualisation module so that any third party can interact. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;⮚ **Browser extenstion** for ask me interface which act as our mini support over other platforms
+## Running the tests
 
-## Getting Started
+### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -97,22 +101,28 @@ You need to be in the directory that contains the manage.py file (the djangogirl
 ```
 (myvenv) ~/Krishi_Chaupal$ python manage.py runserver
 ```
-## Running the tests
-![](https://drive.google.com/uc?export=view&id=1iHh8jkbtt6cm3tVSj1QNiCl2XdHvV2VC)
 
 ## Flowchart of different module
 
 ### Crop Suggestion
 ![](https://drive.google.com/uc?export=view&id=1qFGKf12gkxop4YIRNMOt_IBlM0vDoz_2)
 
+
+
 ### Crop Quality Check
 ![](https://drive.google.com/uc?export=view&id=1Od_q-9juIpmYTbY1Ub_aR7dKg7InltCd)
+
+
 
 ### Chatbot
 ![](https://drive.google.com/uc?export=view&id=1lpPxA-yUin4Cvry05e8dT6VGHFuSSuC8)
 
+
+
 ### Loan Visualization
 ![](https://drive.google.com/uc?export=view&id=1HtS7jXdf9pWhfqRjW5Gj9JLxbBfplTBq)
+
+
 
 ## Acknowledgments
 
