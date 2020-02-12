@@ -95,7 +95,7 @@ Now, run pip install -r requirements.txt to install Django.
 (myvenv) ~$ python manage.py makemigrations
 ```
 ### Starting the web server
-You need to be in the directory that contains the manage.py file (the djangogirls directory). In the console, we can start the web server by running python manage.py runserver:
+You need to be in the directory that contains the manage.py file. In the console, we can start the web server by running python manage.py runserver:
 ```
 (myvenv) ~/Krishi_Chaupal$ python manage.py runserver
 ```
