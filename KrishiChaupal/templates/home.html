@@ -2,16 +2,13 @@
 {% load static %}
     <!-- Header part end-->
 {% block content %}
+<div class="row">
+<div class="col-md-12">
 <div style="background-image: url("{ %static 'krishi_chaupal/img/banner_img.jpg' %}")">
-  <style>
-    @media (min-width: 1200px){
-       background: url("{ %static 'krishi_chaupal/img/banner_img.jpg' %}");
-    }
-</style>
     <section class="banner banner_part">
         <div class="container" id="content">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-xl-6">
+                <div class="col-md-12">
                     <div class="banner_text">
                         <div class="banner_text_iner">
 
@@ -269,4 +266,8 @@
 
     <!-- jquery plugins here-->
     <!-- jquery -->
+
+</div>
+</div>
+
 {% endblock %}
