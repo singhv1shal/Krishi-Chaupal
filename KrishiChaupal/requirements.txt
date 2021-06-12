@@ -19,5 +19,5 @@ six==1.15.0
 soupsieve==2.2
 sqlparse==0.4.1
 twilio==6.54.0
-urllib3==1.26.4
+urllib3==1.26.5
 wcwidth==0.2.5
