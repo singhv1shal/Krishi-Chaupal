@@ -7,7 +7,7 @@ django-bootstrap3==12.1.0
 django-cors-headers==3.7.0
 idna==2.10
 lxml==4.6.2
-numpy==1.19.5
+numpy==1.22.0
 opencv-python==4.5.1.48
 Pillow==8.1.2
 prompt-toolkit==3.0.17
